@@ -12,27 +12,11 @@ New Zealand has banned cruel farming practices like battery cages and sow stalls
 
 This game lets you be the border inspector NZ should have, but doesn't. Guide the Luxon Ostrich into cruel imports to block them before they cross the border!
 
-## How to Play
-
-1. Open the game link above on your phone or computer
-2. Press **Start Game**
-3. **Drag your finger (or mouse)** to move the Ostrich character around the screen
-4. **Crash into the RED-bordered products** (cruel imports) to block them
-5. **Avoid the GREEN-bordered products** (safe NZ products) — hitting them costs you a life!
-6. Block enough cruel imports and the Ostrich character "wakes up" and evolves through 4 stages
-
-### Controls
-- **Phone:** Touch and drag your finger around the screen
-- **Computer:** Move your mouse around the game area
-
-### Tips
-- The character has momentum — it slides around like it's on ice, so plan your moves!
-- Products speed up over time
-- Getting a combo (blocking multiple cruel products in a row) gives bonus points
+The game is 99% LLM written.
 
 ---
 
-## Files in this Project
+## Files in this Projects
 
 | File | What it is |
 |------|-----------|
@@ -53,17 +37,31 @@ Double-click `border-control-nz.html` to open it in your browser. The game will 
 
 ### Option 2: Run a local server (for full audio)
 
-1. Make sure you have **Python** installed (most Macs and Linux computers have it already)
-2. Open a terminal/command prompt
-3. Navigate to the folder containing the game files:
+#### On Mac / Linux
+1. Open **Terminal**
+2. Navigate to the folder containing the game files:
    ```
    cd /path/to/your/folder
    ```
-4. Start a simple server:
+3. Start a simple server:
    ```
    python3 -m http.server 8000
    ```
+4. Open your browser and go to: **http://localhost:8000/border-control-nz.html**
+
+#### On Windows
+1. First, check if you have Python installed: open **Command Prompt** (search "cmd" in the Start menu) and type `python --version`. If you see a version number, you're good!
+2. If you don't have Python, download it from [python.org](https://www.python.org/downloads/) — during install, **tick the box that says "Add Python to PATH"** (this is important!)
+3. Open **Command Prompt** and navigate to the game folder. For example, if it's on your Desktop:
+   ```
+   cd %USERPROFILE%\Desktop\Animal_welfare_game
+   ```
+4. Start the server (note: on Windows it's `python` not `python3`):
+   ```
+   python -m http.server 8000
+   ```
 5. Open your browser and go to: **http://localhost:8000/border-control-nz.html**
+6. To stop the server when you're done, press **Ctrl+C** in the Command Prompt window
 
 ---
 
@@ -71,24 +69,11 @@ Double-click `border-control-nz.html` to open it in your browser. The game will 
 
 If you want to change something (like the campaign URL, facts, or text):
 
-1. Open `border-control-nz.html` in any text editor (even Notepad works)
+1. Open `border-control-nz.html` in any text editor
 2. Search for `CAMPAIGN_URL` to find the campaign link — change it to your real URL
 3. Search for `GAME_URL` to update the sharing link
 4. Search for `FACT: UPDATE THIS` to find all the facts and statistics you can edit
 5. Save the file
-
-### Updating on GitHub (to update the live link)
-
-If you've made changes and want to update the live version:
-
-1. Open a terminal in the project folder
-2. Run these commands one at a time:
-   ```
-   git add -A
-   git commit -m "Updated game"
-   git push
-   ```
-3. Wait 1-2 minutes for GitHub Pages to rebuild, then refresh the game link
 
 ---
 
@@ -123,9 +108,3 @@ To embed the game on a WordPress site or any other website, use an iframe:
 ```
 
 ---
-
-## Credits
-
-Built to raise awareness about New Zealand's animal welfare import loophole.
-
-Learn more: [SAFE NZ](https://www.safe.org.nz/)
